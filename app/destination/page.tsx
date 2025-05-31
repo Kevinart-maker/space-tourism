@@ -1,4 +1,16 @@
-import destination from '../data/data.json';
+import destinationData from '../data/data.json';
+import Image from 'next/image';
+
+type Destination = {
+    name: string;
+    images: {
+        png: string;
+        webp: string;
+    };
+    description: string;
+    distance: string;
+    travel: string;
+};
 
 export default function Page() {
     return (
@@ -8,15 +20,18 @@ export default function Page() {
                 <h1 className="font-semibold">PICK YOUR DESTINATION</h1>
             </header>
             <div className="flex flex-wrap gap-8 justify-center w-full">
-                {destination.destinations.map((item: any) => (
+                {(destinationData.destinations as Destination[]).map((item) => (
                     <div
                         key={item.name}
                         className="bg-white/10 rounded-xl shadow-lg p-6 flex flex-col items-center w-64"
                     >
-                        <img
-                            src={item.images?.png || item.images?.webp}
+                        <Image
+                            src={item.images.png.replace('./', '/')}
                             alt={item.name}
+                            width={128}
+                            height={128}
                             className="w-32 h-32 object-contain mb-4"
+                            priority
                         />
                         <h2 className="text-2xl font-bold mb-2">{item.name}</h2>
                         <p className="text-sm text-gray-300 mb-4 text-center">{item.description}</p>
