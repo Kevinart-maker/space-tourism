@@ -1,0 +1,35 @@
+*{
+  transition: 0.3 ease all;
+}
+
+:root{
+    --primary: #D0D6F9;
+    --secondary: #0B0D17;
+    --white: #FFFFFF;
+}
+
+.blurry {
+  backdrop-filter: blur(10px);
+  background: rgba(51, 51, 51, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* border: 1px solid rgba(215, 210, 210, 0.3); */
+}
+
+.blurry {
+    white-space: nowrap;
+}
+
+a.active{
+    border-bottom: 1px solid var(--primary);
+}
+a.mobile-active{
+    border-right: 1px solid var(--primary);
+}
+
+.navbar {
+  font-family: var(--font-barlow-condensed), sans-serif;
+}
+
+.heading-bellefair {
+  font-family: var(--font-bellefair), serif;
+}
