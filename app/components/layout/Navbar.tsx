@@ -85,9 +85,9 @@ export default function Navbar() {
             <div className="hidden xl:flex items-center gap-10 blurry px-4 pl-[12rem] absolute -right-10 w-[50%]">
                 <div className="w-[90%] h-[0.1px] bg-[var(--primary)] left-[-85%] absolute"/>
                 <Link href="/" className={`py-10 ${pathname === '/' ? ' active' : ''}`}><strong>00</strong> HOME</Link>
-                <Link href="/destination" className={pathname === '/destination' ? 'active' : ''}><strong>01</strong> DESTINATION</Link>
-                <Link href="/crew" className={pathname === '/crew' ? 'active' : ''}><strong>02</strong> CREW</Link>
-                <Link href="/technology" className={pathname === '/technology' ? 'active' : ''}><strong>03</strong> TECHNOLOGY</Link>
+                <Link href="/destination" className={`py-10 ${pathname === '/destination' ? 'active' : ''}`}><strong>01</strong> DESTINATION</Link>
+                <Link href="/crew" className={`py-10 ${pathname === '/crew' ? 'active' : ''}`}><strong>02</strong> CREW</Link>
+                <Link href="/technology" className={`py-10 ${pathname === '/technology' ? 'active' : ''}`}><strong>03</strong> TECHNOLOGY</Link>
             </div>
         </nav>
     )

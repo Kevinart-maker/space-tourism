@@ -3,7 +3,7 @@ export default function Home() {
     <main className="home h-[100vh] w-full flex items-center lg:items-end">
 
       <div className="flex lg:flex-row flex-col lg:justify-between gap-10 items-center lg:p-[10rem] p-4">
-        <div className="flex flex-col lg:text-left text-center gap-2 lg:w-[50%] items-center lg-items-start">
+        <div className="flex flex-col lg:text-left text-center gap-2 lg:w-[50%] items-center lg:items-start">
           <h2 className="text-[var(--primary)] navbar text-lg">SO, YOU WANT TO TRAVEL TO</h2>
           <h1 className="text-[3rem] md:text-[5rem] lg:text-[7rem] heading-bellefair">SPACE</h1>
           <p className="text-sm md:w-[70%]">
