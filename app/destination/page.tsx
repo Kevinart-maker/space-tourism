@@ -32,25 +32,25 @@ export default function Page() {
         ).replace('./', '/');
 
     return (
-        <div className="destination h-[100vh] w-full flex flex-col gap-12 lg:justify-between justify-center lg:px-[10rem] lg:py-[10rem]">
+        <div className="destination h-[] lg:h-[100vh] w-full flex flex-col gap-12 lg:justify-between justify-center px-[2rem] lg:px-[10rem] pt-[10rem] py-[2rem] lg:py-[10rem]">
             <header className="flex gap-4 navbar text-2xl letter">
                 <span className="opacity-65">01</span>
                 <h1 className="font-semibold">PICK YOUR DESTINATION</h1>
             </header>
             <div className="flex flex-col lg:flex-row gap-12 transition-all duration-500">
                 {/* Carousel Slide */}
-                <div className="flex gap-12 items-center w-full transition-all duration-500">
+                <div className="flex flex-col lg:flex-row gap-12 items-center w-full transition-all duration-500">
                     <Image
                         src={imageSrc}
                         alt={currentDestination.name}
                         width={731.33}
                         height={731.33}
-                        className="w-[20rem] object-contain mb-4 transition-all duration-500"
+                        className="w-[15rem] md:w-[20rem] object-contain mb-4 transition-all duration-500"
                         priority
                     />
-                    <div>
+                    <div className='text-center lg:text-left'>
                         {/* Carousel Navigation */}
-                        <div className="flex flex-row gap-12 mb-6 lg:mb-0">
+                        <div className="flex flex-row justify-between lg:justify-normal lg:gap-12 mb-6 lg:mb-0">
                             {destinations.map((item, idx) => (
                                 <button
                                     key={item.name}
@@ -66,10 +66,10 @@ export default function Page() {
                             ))}
                         </div>
 
-                        <h2 className="text-[6rem] heading-bellefair mb-2 uppercase">{currentDestination.name}</h2>
+                        <h2 className="text-[3rem] lg:text-[6rem] heading-bellefair mb-2 uppercase">{currentDestination.name}</h2>
                         <p className="text-base text-gray-300 mb-6 max-w-md">{currentDestination.description}</p>
                         <div className='w-full h-[1px] bg-white'/>
-                        <div className="mt-[3rem] flex gap-10 w-full text-xs text-gray-400">
+                        <div className="mt-[3rem] flex flex-col lg:flex-row gap-6 lg:gap-10 w-full text-xs text-gray-400">
                             <span className='flex flex-col gap-3 heading-bellefair'>
                                 <span className="text-white navbar">AVG. DISTANCE</span> <span className=' text-[2rem]'>{currentDestination.distance}</span>
                             </span>
