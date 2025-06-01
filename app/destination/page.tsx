@@ -50,11 +50,11 @@ export default function Page() {
                     />
                     <div>
                         {/* Carousel Navigation */}
-                        <div className="flex flex-row gap-6 mb-6 lg:mb-0">
+                        <div className="flex flex-row gap-12 mb-6 lg:mb-0">
                             {destinations.map((item, idx) => (
                                 <button
                                     key={item.name}
-                                    className={`uppercase tracking-widest px-2 py-1 text-lg font-semibold ${
+                                    className={`uppercase navbar tracking-widest px-2 py-1 text-lg font-semibold ${
                                         idx === current
                                             ? 'border-b-2 border-[var(--primary)] text-white'
                                             : 'text-gray-400 hover:text-white'
@@ -66,14 +66,15 @@ export default function Page() {
                             ))}
                         </div>
 
-                        <h2 className="text-3xl heading-bellefair mb-2">{currentDestination.name}</h2>
+                        <h2 className="text-[6rem] heading-bellefair mb-2 uppercase">{currentDestination.name}</h2>
                         <p className="text-base text-gray-300 mb-6 max-w-md">{currentDestination.description}</p>
-                        <div className="flex gap-8 w-full text-xs text-gray-400">
-                            <span>
-                                <strong className="text-white">Distance:</strong> {currentDestination.distance}
+                        <div className='w-full h-[1px] bg-white'/>
+                        <div className="mt-[3rem] flex gap-10 w-full text-xs text-gray-400">
+                            <span className='flex flex-col gap-3 heading-bellefair'>
+                                <span className="text-white navbar">AVG. DISTANCE</span> <span className=' text-[2rem]'>{currentDestination.distance}</span>
                             </span>
-                            <span>
-                                <strong className="text-white">Travel Time:</strong> {currentDestination.travel}
+                            <span className='flex flex-col gap-3 heading-bellefair'>
+                                <span className="text-white navbar">EST. TRAVEL TIME</span> <span className=' text-[2rem]'>{currentDestination.travel}</span>
                             </span>
                         </div>
                     </div>
